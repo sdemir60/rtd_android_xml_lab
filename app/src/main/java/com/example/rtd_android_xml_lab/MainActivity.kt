@@ -1,16 +1,12 @@
 package com.example.rtd_android_xml_lab
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-
-    private var counter = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -23,19 +19,17 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        initCounter();
-
+        initFragment()
     }
 
-    private fun initCounter(){
 
-        val counterTextView = findViewById<TextView>(R.id.counterTextView)
-        val incrementButton = findViewById<Button>(R.id.incrementButton)
+    fun initFragment() {
 
-        incrementButton.setOnClickListener{
-            counter++
-            counterTextView.text = counter.toString()
-        }
+        val fragment = CounterFragment()
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, fragment)
+            .commit()
 
     }
 }
