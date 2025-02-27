@@ -7,10 +7,14 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import dagger.hilt.android.AndroidEntryPoint
+import androidx.fragment.app.viewModels
 
+@AndroidEntryPoint
 class CounterFragment : Fragment() {
 
     private var counter = 0
+    private val viewModel: UserViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,6 +25,7 @@ class CounterFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_counter, container, false)
 
         initCounter(view)
+        initHilt(view)
 
         return view
     }
@@ -33,6 +38,17 @@ class CounterFragment : Fragment() {
         incrementButton.setOnClickListener {
             counter++
             counterTextView.text = counter.toString()
+        }
+
+    }
+
+    private fun initHilt(view: View) {
+
+        val textView = view.findViewById<TextView>(R.id.textView)
+        val getUserNameWithHiltButton = view.findViewById<Button>(R.id.getUserNameWithHiltButton)
+
+        getUserNameWithHiltButton.setOnClickListener {
+            textView.text = viewModel.getUserName()
         }
 
     }

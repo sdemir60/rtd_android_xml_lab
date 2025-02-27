@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.dagger.hilt.android")
+    id("kotlin-kapt")
+    id("kotlinx-serialization")
 }
 
 android {
@@ -45,4 +48,21 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
+
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.squareup.moshi:moshi-kotlin:1.15.1")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.15.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+
+}
+
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
 }
