@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
 
         super.onViewCreated(view, savedInstanceState)
 
-        val button = view.findViewById<Button>(R.id.button_navigate_to_subhome)
+        val button = view.findViewById<Button>(R.id.button_navigate_to_subpage)
         val editText = view.findViewById<EditText>(R.id.user_message_text_input_edit_text)
 
         button.setOnClickListener {
@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
                 putString("userMessage", userMessage)
             }
 
-            findNavController().navigate(R.id.action_homeNavigation_to_subHomeFragment, bundle)
+            findNavController().navigate(R.id.action_homeNavigation_to_subPageFragment, bundle)
         }
     }
 }

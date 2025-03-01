@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-class SubHomeFragment : Fragment() {
+class SubPageFragment : Fragment() {
 
     private var userMessage: String? = null
 
@@ -22,7 +22,7 @@ class SubHomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.sub_home_fragment, container, false)
+        return inflater.inflate(R.layout.subpage_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

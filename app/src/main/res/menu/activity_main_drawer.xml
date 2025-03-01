@@ -10,6 +10,10 @@
             android:id="@+id/counter_navigation"
             android:icon="@drawable/ic_topic"
             android:title="Counter (HILT and JSON)" />
+        <item
+            android:id="@+id/api_lib_navigation"
+            android:icon="@drawable/ic_topic"
+            android:title="API Library (Retrofit and Volley)" />
     </group>
 
 </menu>

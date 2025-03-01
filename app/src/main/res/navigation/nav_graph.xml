@@ -11,8 +11,8 @@
         android:label="Home"
         tools:layout="@layout/home_fragment">
         <action
-            android:id="@+id/action_homeNavigation_to_subHomeFragment"
-            app:destination="@id/sub_home_navigation" />
+            android:id="@+id/action_homeNavigation_to_subPageFragment"
+            app:destination="@id/subpage_navigation" />
     </fragment>
 
     <fragment
@@ -21,14 +21,20 @@
         android:label="Counter (HILT and JSON)"
         tools:layout="@layout/counter_fragment" />
     <fragment
-        android:id="@+id/sub_home_navigation"
-        android:name="com.example.rtd_android_xml_lab.SubHomeFragment"
-        android:label="sub_home_fragment"
-        tools:layout="@layout/sub_home_fragment">
+        android:id="@+id/subpage_navigation"
+        android:name="com.example.rtd_android_xml_lab.SubPageFragment"
+        android:label="subpage_fragment"
+        tools:layout="@layout/subpage_fragment">
         <argument
             android:name="userMessage"
             android:defaultValue="user Message"
             app:argType="string" />
     </fragment>
+
+    <fragment
+        android:id="@+id/api_lib_navigation"
+        android:name="com.example.rtd_android_xml_lab.APILibFragment"
+        android:label="API Library (Retrofit and Volley)"
+        tools:layout="@layout/api_lib_fragment" />
 
 </navigation>
