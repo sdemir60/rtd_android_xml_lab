@@ -22,7 +22,7 @@ class CounterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val view: View = inflater.inflate(R.layout.fragment_counter, container, false)
+        val view: View = inflater.inflate(R.layout.counter_fragment, container, false)
 
         initCounter(view)
         initHilt(view)
@@ -32,8 +32,8 @@ class CounterFragment : Fragment() {
 
     private fun initCounter(view: View) {
 
-        val counterTextView = view.findViewById<TextView>(R.id.counterTextView)
-        val incrementButton = view.findViewById<Button>(R.id.incrementButton)
+        val counterTextView = view.findViewById<TextView>(R.id.counter_text_view)
+        val incrementButton = view.findViewById<Button>(R.id.increment_button)
 
         incrementButton.setOnClickListener {
             counter++
@@ -44,8 +44,8 @@ class CounterFragment : Fragment() {
 
     private fun initHilt(view: View) {
 
-        val textView = view.findViewById<TextView>(R.id.textView)
-        val getUserNameWithHiltButton = view.findViewById<Button>(R.id.getUserNameWithHiltButton)
+        val textView = view.findViewById<TextView>(R.id.user_name_text_view)
+        val getUserNameWithHiltButton = view.findViewById<Button>(R.id.get_user_name_with_hilt_button)
 
         getUserNameWithHiltButton.setOnClickListener {
             textView.text = viewModel.getUserName()

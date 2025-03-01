@@ -5,21 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
     <TextView
-        android:id="@+id/counterTextView"
+        android:id="@+id/counter_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
         android:text="0"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/user_name_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/user_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Merhaba Dünya!"
@@ -29,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/buttonsContainer"
+        android:id="@+id/buttons_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -37,20 +35,20 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/user_name_text_view">
 
         <Button
-            android:id="@+id/incrementButton"
+            android:id="@+id/increment_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="ARTTIR" />
+            android:text="INCREASE" />
 
         <Button
-            android:id="@+id/getUserNameWithHiltButton"
+            android:id="@+id/get_user_name_with_hilt_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GETİR (HILT)" />
+            android:text="GET (HILT)" />
 
     </LinearLayout>
 

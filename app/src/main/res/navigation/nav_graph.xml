@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_navigation">
+
+    <fragment
+        android:id="@+id/home_navigation"
+        android:name="com.example.rtd_android_xml_lab.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_homeNavigation_to_subHomeFragment"
+            app:destination="@id/sub_home_navigation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/counter_navigation"
+        android:name="com.example.rtd_android_xml_lab.CounterFragment"
+        android:label="Counter (HILT and JSON)"
+        tools:layout="@layout/counter_fragment" />
+    <fragment
+        android:id="@+id/sub_home_navigation"
+        android:name="com.example.rtd_android_xml_lab.SubHomeFragment"
+        android:label="sub_home_fragment"
+        tools:layout="@layout/sub_home_fragment">
+        <argument
+            android:name="userMessage"
+            android:defaultValue="user Message"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
