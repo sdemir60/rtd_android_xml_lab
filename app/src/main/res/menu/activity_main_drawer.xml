@@ -14,6 +14,10 @@
             android:id="@+id/api_lib_navigation"
             android:icon="@drawable/ic_topic"
             android:title="API Library (Retrofit and Volley)" />
+        <item
+            android:id="@+id/note_navigation"
+            android:icon="@drawable/ic_note"
+            android:title="Notes (Room and SQLite)" />
     </group>
 
 </menu>

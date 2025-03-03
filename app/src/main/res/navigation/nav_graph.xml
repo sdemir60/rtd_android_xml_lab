@@ -37,4 +37,29 @@
         android:label="API Library (Retrofit and Volley)"
         tools:layout="@layout/api_lib_fragment" />
 
+    <fragment
+        android:id="@+id/note_navigation"
+        android:name="com.example.rtd_android_xml_lab.NoteFragment"
+        android:label="Notes"
+        tools:layout="@layout/note_fragment">
+        <action
+            android:id="@+id/action_noteFragment_to_addEditNoteFragment"
+            app:destination="@id/add_edit_note_navigation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_edit_note_navigation"
+        android:name="com.example.rtd_android_xml_lab.AddEditNoteFragment"
+        android:label="Add/Edit Note"
+        tools:layout="@layout/add_edit_note_fragment">
+        <argument
+            android:name="noteId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="noteTitle"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
 </navigation>
