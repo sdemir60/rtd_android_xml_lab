@@ -35,6 +35,8 @@ class APILibFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        RetrofitClient.initialize(requireContext())
+
         btnRetrofit = view.findViewById(R.id.get_with_retrofit_button)
         btnVolley = view.findViewById(R.id.get_with_volley_button)
         progressBar = view.findViewById(R.id.get_placeholder_posts_data_progress_bar)
@@ -67,8 +69,16 @@ class APILibFragment : Fragment() {
 
         lifecycleScope.launch {
             try {
+
                 val posts = RetrofitClient.api.getPosts()
                 updateUI(posts)
+
+                if (RetrofitClient.isDataFromCache()) {
+                    Toast.makeText(requireContext(), "Veriler önbellekten yüklendi!", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(requireContext(), "Veriler API'den yüklendi!", Toast.LENGTH_SHORT).show()
+                }
+
                 showLoading(false)
             } catch (e: Exception) {
                 handleError("Retrofit Error: ${e.message}")
