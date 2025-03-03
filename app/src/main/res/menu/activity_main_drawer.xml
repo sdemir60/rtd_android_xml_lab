@@ -22,6 +22,10 @@
             android:id="@+id/asyc_navigation"
             android:icon="@drawable/ic_note"
             android:title="ASYC (Coroutines and RxJava)" />
+        <item
+            android:id="@+id/persist_counter_navigation"
+            android:icon="@drawable/ic_note"
+            android:title="Persist Counter (WorkManager and SharedPreferences)" />
     </group>
 
 </menu>

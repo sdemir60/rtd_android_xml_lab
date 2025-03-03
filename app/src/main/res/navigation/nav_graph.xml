@@ -68,4 +68,10 @@
         android:label="ASYC (Coroutines and RxJava)"
         tools:layout="@layout/asyc_fragment" />
 
+    <fragment
+        android:id="@+id/persist_counter_navigation"
+        android:name="com.example.rtd_android_xml_lab.PersistCounterFragment"
+        android:label="Persist Counter (WorkManager and SharedPreferences)"
+        tools:layout="@layout/persist_counter_fragment" />
+
 </navigation>
