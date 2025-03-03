@@ -18,6 +18,10 @@
             android:id="@+id/note_navigation"
             android:icon="@drawable/ic_note"
             android:title="Notes (Room and SQLite)" />
+        <item
+            android:id="@+id/asyc_navigation"
+            android:icon="@drawable/ic_note"
+            android:title="ASYC (Coroutines and RxJava)" />
     </group>
 
 </menu>

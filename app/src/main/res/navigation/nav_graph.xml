@@ -62,4 +62,10 @@
             app:argType="string" />
     </fragment>
 
+    <fragment
+        android:id="@+id/asyc_navigation"
+        android:name="com.example.rtd_android_xml_lab.ASYCFragment"
+        android:label="ASYC (Coroutines and RxJava)"
+        tools:layout="@layout/asyc_fragment" />
+
 </navigation>
